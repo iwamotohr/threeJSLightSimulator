@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ThreeJS Light Simulator</title>
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="appTitle">Light Simulator</h1>
+      <canvas class="headerWebgl"></canvas>
+      <button type="button" class="startButton js-startButton">
+        Start Light Simulator
+      </button>
+    </header>
+    <main class="main">
+      <canvas class="webgl"></canvas>
+      <button class="backButton js-backButton">Back to top</button>
+    </main>
+    <script type="module" src="/header.js"></script>
+    <script type="module" src="/main.js"></script>
+    <script>
+      const headerElem = document.querySelector(".header");
+      const startButton = document.querySelector(".js-startButton");
+      const mainElem = document.querySelector(".main");
+      const backButton = document.querySelector(".js-backButton");
+
+      function start() {
+        headerElem.classList.add("fadeout");
+        setTimeout(function () {
+          headerElem.style.display = "none";
+        }, 3000);
+        mainElem.classList.add("fadeIn");
+        setTimeout(function () {
+          mainElem.style.display = "block";
+        });
+      }
+      function back() {
+        mainElem.classList.add("fadeout");
+        setTimeout(function () {
+          mainElem.style.display = "none";
+        }, 1000);
+        headerElem.classList.add("fadeIn");
+        setTimeout(function () {
+          headerElem.style.display = "block";
+        });
+      }
+      startButton.addEventListener("click", start, false);
+      backButton.addEventListener("click", back, false);
+    </script>
+  </body>
+</html>
