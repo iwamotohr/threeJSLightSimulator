@@ -184,16 +184,16 @@ floorLightFoot.castShadow = true;
 
 scene.add(floorLight, floorLightStick, floorLightFoot);
 
-//ソファー
-// 3DS形式のモデルデータを読み込む
-const loader = new TDSLoader();
-// 3dsファイルのパスを指定
-const sofaObj = await loader.loadAsync("models/Koltuk.3ds");
-sofaObj.rotation.set(-Math.PI * 0.5, 0, Math.PI * 0.5);
-sofaObj.position.set(-1, 0.15, 0);
-sofaObj.castShadow = true;
-// 読み込み後に3D空間に追加
-scene.add(sofaObj);
+// //ソファー
+// // 3DS形式のモデルデータを読み込む
+// const loader = new TDSLoader();
+// // 3dsファイルのパスを指定
+// const sofaObj = await loader.loadAsync("models/Koltuk.3ds");
+// sofaObj.rotation.set(-Math.PI * 0.5, 0, Math.PI * 0.5);
+// sofaObj.position.set(-1, 0.15, 0);
+// sofaObj.castShadow = true;
+// // 読み込み後に3D空間に追加
+// scene.add(sofaObj);
 
 // ローテーブル
 // テーブルボード・脚
