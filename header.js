@@ -1,7 +1,5 @@
-import "./style.css";
 import * as THREE from "three";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
-import { TDSLoader } from "three/examples/jsm/loaders/TDSLoader.js";
 
 /**
  * キャンバスを取得
